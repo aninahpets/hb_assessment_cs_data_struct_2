@@ -12,12 +12,16 @@ def print_item(my_list, i=0):
         3
 
     """
-    if len(my_list) == 1:
-        print my_list[0]
-        return
-    print my_list.pop(i)
-    i+=1
-    print_item(my_list)
+    # if len(my_list) == 1:
+    #     print my_list[0]
+    #     return
+    # print my_list.pop(i)
+    # i += 1
+    # print_item(my_list)
+
+    if i < len(my_list):
+        print my_list[i]
+        print_item(my_list, i+1)
 
 
 # 2. Write a function that uses recursion to print each node in a tree.
@@ -88,8 +92,7 @@ def num_nodes(tree):
         return 0
     total_nodes = 1
     for child in tree.children:
-        total_nodes += 1
-        num_nodes(child)
+        total_nodes += num_nodes(child)
     return total_nodes
 
 #####################################################################

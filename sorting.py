@@ -6,7 +6,15 @@ def bubble_sort(lst):
         >>> bubble_sort([3, 5, 7, 2, 4, 1])
         [1, 2, 3, 4, 5, 7]
     """
-    pass
+    for i in range(len(lst) - 1):
+        swapped = False
+        for j in range(len(lst) - 1 - i):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+                swapped = True
+        if not swapped:
+            break
+    return lst
 
 
 def merge_lists(list1, list2):
@@ -15,23 +23,41 @@ def merge_lists(list1, list2):
     >>> merge_lists([1, 3, 9], [4, 7, 11])
     [1, 3, 4, 7, 9, 11]
     """
+    final_list = []
 
-    pass
+    index1 = 0
+    index2 = 0
+    
+    while index1 < len(list1) or index2 < len(list2):
+        if index1 >= len(list1):
+            final_list.append(list2[index2])
+            index2 += 1
+        elif index2 >= len(list2):
+            final_list.append(list1[index1])
+            index1 += 1
+        elif list1[index1] < list2[index2]:
+            final_list.append(list1[index1])
+            index1 += 1
+        else:
+            final_list.append(list2[index2])
+            index2 += 1
+
+    return final_list
 
 
-##########ADVANCED##########
-def merge_sort(lst):
-    """
-    Given a list, returns a sorted version of that list.
-    Finish the merge sort algorithm by writing another function that
-    that takes in a single unsorted list of integers and uses recursion and the 'merge_lists'
-    function you already wrote to return a new sorted list containing all integers from
-    thin input list. In other words, the new function should sort a list using merge_lists
-    and recursion.
-    >>> merge_sort([6, 2, 3, 9, 0, 1])
-    [0, 1, 2, 3, 6, 9]
-    """
-    pass
+# ##########ADVANCED##########
+# def merge_sort(lst):
+#     """
+#     Given a list, returns a sorted version of that list.
+#     Finish the merge sort algorithm by writing another function that
+#     that takes in a single unsorted list of integers and uses recursion and the 'merge_lists'
+#     function you already wrote to return a new sorted list containing all integers from
+#     thin input list. In other words, the new function should sort a list using merge_lists
+#     and recursion.
+#     >>> merge_sort([6, 2, 3, 9, 0, 1])
+#     [0, 1, 2, 3, 6, 9]
+#     """
+#     pass
 
 
 
