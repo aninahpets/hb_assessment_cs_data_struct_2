@@ -1,0 +1,98 @@
+RECURSION
+Question 1: In your own words, what is recursion?
+Answer 1: A function that is defined in terms of itself and calls itself.
+
+Question 2: Why is it necessary to have a Base Case?
+Answer 2: Without a base case, your function would continue to recurse forever.
+
+GRAPHS
+Question 1: What is a graph?
+Answer 1: A graph is a data structure with connections between nodes. It can be thought of as a non-directional tree with no root (although that's a little bit of a backwards way of thinking about it).
+
+Question 2: How is a graph different from a tree?
+Answer 2: A tree is by its nature directed. A graph can be directed or non-directed, and can have cycles, whereas a tree cannot. A graph can also have multiple unconnected parts and has no root.
+
+Question 3: Give an example of something that would be good to model with a Graph.
+Answer 3: The obvious answer that we have been working with is social networks.
+
+DATA STRUCTURE PERFORMANCE:
+
+RUNTIME
+Python List (Array): 
+    Add-L: O(n)
+    Pop-L: O(n)
+    Pop-R: O(1)
+
+Linked List:
+    Index: O(n)
+    Search: O(n)
+    Add-R: O(1)
+    Add-L: O(1)
+    Pop-L: O(1)
+    Pop-R: O(1)
+
+Doubly-Linked List:
+    Index: O(n)
+    Search: O(n)
+    Add-R: O(1)
+    Add-L: O(1)
+    Pop-L: O(1)
+    Pop-R: O(1)
+
+Queue (as Array):
+    Add-R: O(1)
+    Pop-L: O(n)
+
+Queue (as LL or DLL):
+    Add-R: O(1)
+    Pop-L: O(1)
+
+Stack (as Array, LL, or DLL):
+    Add-R: O(1)
+    Pop-R: O(1)
+
+Deque (as DLL):
+    Add-R: O(1)
+    Add-L: O(1)
+    Pop-L: O(1)
+    Pop-R: O(1)
+
+RUNTIME AND MEMORY
+
+Set (Hash Map):
+    Get: O(1)
+    Add: O(1)
+    Delete: O(1)
+    Iterate: O(n)
+    Memory: Medium
+
+Binary Search Tree:
+    Get: O(log n)
+    Add: O(1)
+    Delete: O(1)
+    Iterate: O(n)
+    Memory: A little (however much data is in the tree?) This question is confusing.
+
+Tree:
+    Get: O(n)
+    Add: O(1)
+    Delete: O(1)
+    Iterate: O(n)
+    Memory: A little (however much data is in the tree?) This question is confusing.
+
+SORTING
+Question 1: Describe in words how the Bubble Sort algorithm works.
+Answer 1: The Bubble Sort starts with the first item in a list and compares it to the next item in the list. If they are in the wrong order, it swaps them and continues. If not, it continues without swapping. In this way, it "bubbles" the largest number to the end of the list. It iterates through until the list is ordered.
+
+Question 2: Describe in words how the Merge Sort algorithm works.
+Answer 2: The Merge Sort algorithm divides a list of numbers in half recursively until it has a list of lists of single numbers. It then merges each sorted list back into the correct order one by one until the list is whole again.
+
+Question 3: Describe in words how the Quick Sort algorithm works.
+Answer 3: A pivot is randomly placed in a list (this will work out over time to be about halfway on average) and all the numbers to the 'left' (before) the pivot are smaller than the pivot, and all the numbers to the right (after) the pivot are larger than the pivot. This happens recursively so you continue to divide each half and divide the items to be sorted around the pivot. This happens until the list is sorted.
+
+GIT BRANCHING
+Question 1: Give an instance when you would use git branching.
+Answer 1: When you have code in production and are working on an additional feature and don't want it to affect the production code until it's been reviewed/tested.
+
+Question 2: What is a pull request?
+Answer 2: When you have a branch of code that you believe is ready to be merged onto another branch, you submit a pull request to the 'owner' of that branch. They can then review your code if necessary and merge it into the main branch.
